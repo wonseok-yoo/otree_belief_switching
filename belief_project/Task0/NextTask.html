@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Recorded - Scenario 0
+{% endblock %}
+
+
+
+{% block extra_css %}
+    <style>
+        .inline-images {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .inline-images img {
+            margin: 0 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1></h1>
+    <p> Thank you for completing your problem.
+    <p> You will now move on to the next problem. </p>
+    <p> Everything will reset. </p>
+
+        <p>Click "Next" to proceed.</p>
+    </div>
+
+    <div>
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </div>
+
+{% endblock %}

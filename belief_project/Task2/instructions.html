@@ -1,0 +1,39 @@
+{% extends "global/Page.html" %}
+{% block title %}
+    Instructions - Scenario 2
+{% endblock %}
+
+{% block content %}
+    <p> You will be asked to do a similar task as in Scenario 1.</p>
+    <p> <strong> Except</strong> that </p>
+    <p> - You will be able to <strong> swap </strong> the box if you want at the end of the <strong>5th</strong> round, at some <strong> costs.</strong> </p>
+    <p>You will be presented with two boxes: the <span style="color: green;">Green</span> Box and the <span style="color: red;">Red</span> Box.(As shown in the image below)</p>
+
+    <p> - The <span style="color: green;">Green</span> Box contains 5 green balls and 4 red balls.</p>
+
+    <p> - The <span style="color: red;">Red</span> Box has 5 red balls and 4 green balls.</p>
+
+
+    <p>The computer will randomly select one of the two boxes. You will not be informed which box has been chosen, whether it is the <span style="color: green;">Green</span> Box or the <span style="color: red;">Red</span> Box.</p>
+
+    <p>Your task is to guess the probability that the box is the Green Box and to keep or swap the box. </p>
+
+    <p>You will be asked to tell us your best guess that the chosen box is the Green Box.</p>
+
+    <p>Next, we will randomly draw a ball from the selected box and show it to you. Then, you will be asked to report the likelihood that you think the chosen box is the <span style="color: green;">Green</span> Box.</p>
+
+    <p>You will draw balls for 5 rounds. After each round, you will be asked to tell us your best guess.</p>
+
+     <p> After the 5th round, if you would like, you will be able to <strong> swap </strong> the box at some costs. </p>
+    <img src="{{ static '4r5g_box.png' }}" alt="Green Box Image">
+    <img src="{{ static '5r4g_box.png' }}" alt="Red Box Image">
+    <p> The left is the Green Box and the right is the Red Box. </p>
+
+    <p>Click "Next" to proceed to the experiment.</p>
+    <form method="POST" >
+
+        <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+
+{% endblock %}
+

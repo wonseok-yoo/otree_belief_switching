@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Intro
+{% endblock %}
+
+
+
+{% block extra_css %}
+    <style>
+        .inline-images {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .inline-images img {
+            margin: 0 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1></h1>
+    <p> There are two boxes, Box 1 and Box 2.
+    <p> Box 1 contains 5 green balls and 4 red balls while Box 2 has 4 green balls and 5 red balls.
+    <p> You will be endowed with one of the two boxes with probability 1/2.
+    <p> Then you will draw a ball with a replacement from the box you have for 5 rounds.
+    <p> After each round, you will be asked to report the belief that you think the box you have is Box 1.
+    <p> After 5 rounds, you will be able to keep the box or to swap the box.
+    <p> If you end up having Box 1, you get $1.5, otherwise you get $0.5.</p>
+
+    <div class="inline-images">
+        <img src="{{ static '4r5g_box.png' }}" alt="Box 1" />
+        <figcaption>Box 1: 5 green balls, 4 red balls</figcaption>
+    </div>
+    <div class="inline-images">
+        <img src="{{ static '5r4g_box.png' }}" alt="Box 2" />
+        <figcaption>Box 2: 4 green balls, 5 red balls</figcaption>
+    </div>
+    <div>
+
+        <p>Click "Next" to proceed to the experiment.</p>
+    </div>
+
+    <div>
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </div>
+
+{% endblock %}
+

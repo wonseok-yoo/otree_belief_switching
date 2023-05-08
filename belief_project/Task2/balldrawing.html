@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Ball Drawing - Scenario 2
+{% endblock %}
+
+{% block content %}
+    <h1>Round {{ round }}</h1>
+    {% if round > 1 %}
+        The previous ball was returned to the box. Now there are 9 balls in the box.
+    {% endif %}
+    <p> One of the balls will be randomly chosen from the box you have. </p>
+
+
+    <form method="POST" >
+
+        <button type="submit" class="btn btn-primary">Next</button>
+    </form>
+{% endblock %}

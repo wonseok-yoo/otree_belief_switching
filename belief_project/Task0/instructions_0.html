@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Instructions - Experiment 1
+{% endblock %}
+
+
+
+{% block extra_css %}
+    <style>
+        .inline-images {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .inline-images img {
+            margin: 0 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1></h1>
+
+    <p> Experiment 1 consists of 4 scenarios with 3 problems each. In total, you will be solving 12 problems.
+    <p> At the end of the experiment, the computer will randomly pick one of the 3 problems for payment for each scenario. </p>
+    <p> In other words, the computer will pick 4 problems, one problem for one scenario. </p>
+    <p> For each problem, you will be asked to complete tasks.
+    <p> If the problem was selected for payment, the computer will randomly pick one of the decisions you made in the problem to determine your payment. </p>
+
+
+        <p>Click "Next" to proceed to the experiment.</p>
+    </div>
+
+    <div>
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </div>
+
+{% endblock %}
+
