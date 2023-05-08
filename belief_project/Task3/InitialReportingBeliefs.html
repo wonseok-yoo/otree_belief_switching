@@ -1,0 +1,46 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    What is your initial guess? - Scenario 3
+{% endblock %}
+
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <p> The computer has randomly chosen one of the two boxes.
+    <p> The probability that the  Green Box was selected is {{prob}}%.
+    <p> Please indicate the estimated likelihood, as a percentage between 0 and 100, that the chosen box is the Green Box. </p>
+    <p> You can move the slider below to report your guess. </p>
+    <p> If you move your slider to the left, your reported likelihood will be smaller, while moving the slider to the right will increase your reported likelihood.</p>
+
+
+<form method="POST">
+    <table>
+        <tr>
+            <p id="feedback_one"><br></p>
+            <div style="display: flex; align-items: center; width: 500px;">
+                <span>0% </span>
+                <input type="range" name="belief_in" value="{{pre_belief}}" step="1" style="width: 100%;" min="0" max="100" id="id_slider_one" class="form-control">
+                <span> 100% </span>
+            </div>
+            <br>
+            <output id="slider_output_one"></output>
+        </tr>
+    </table>
+
+</form>
+
+
+ <script>
+    $(document).ready(function () {
+        $('input[name=belief_in]').on('input', function() {
+            document.getElementById("feedback_one").innerHTML = `Your estimate that the box is <span style="color: #32CD32;"> Green </span>Box:` + $(this).val() + '%!';
+            $('#check_slider_one').val(1);
+        });
+    });
+ </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+<button type="submit">Submit </button>
+
+{% endblock %}

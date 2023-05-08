@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block content %}
+    <h1>Swap or Keep</h1>
+    <p> After the 5th round, your guess that your box is the Green box was {{ guess  }}%</p>
+    <p> You have two options. You can either <strong> swap </strong> or <strong> keep </strong> your box. </p>
+    <p> You can swap the box without any costs.
+    <p> If you end up owning the Green Box, you will get $3</p>
+    <p> If you end up owning the Red Box, you will get $1</p>
+
+
+<form method="post">
+
+    <label for="Box A">
+        <input type="radio" name= "decision"  id="Box A" value="swap" required>
+        swap
+    </label>
+
+    <br>
+
+    <label for="Box B">
+        <input type="radio" name= "decision" id="Box B" value="keep" required>
+        keep
+    </label>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

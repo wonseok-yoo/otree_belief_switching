@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Box Choice - Round {{ player.round_number }}
+{% endblock %}
+
+{% block content %}
+    <h1>Box choice</h1>
+<p> You can choose either of the two boxes from below. One box is Box 1, and the other box is Box 2.</p>
+
+<form method="post">
+
+    <label for="Box A">
+        <input type="radio" name= "box_initial"  id="Box A" value="Box 2" required>
+        Box A
+    </label>
+
+    <br>
+
+    <label for="Box B">
+        <input type="radio" name= "box_initial" id="Box B" value="Box 1" required>
+        Box B
+    </label>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

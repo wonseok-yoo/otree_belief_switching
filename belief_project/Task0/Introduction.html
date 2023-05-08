@@ -1,0 +1,42 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+
+
+{% block extra_css %}
+    <style>
+        .inline-images {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .inline-images img {
+            margin: 0 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1></h1>
+    <p> Thank you for participating in our study.
+    <p> This is a study on belief updating and decision-making.
+    <p> For your participation, you will be paid a participation fee of $10.
+    <p> In addition, you will be able to receive <strong> bonus </strong> payments based on your decisions in the experiment.
+    <p> You will participate in two experiments today: Experiment 1, and Experiment 2. </p>
+    <p> You will receive detailed instructions for each experiment at the beginning of each experiment.
+    <p> All experiments are independent of each other, so your decisions in one experiment will not affect your earnings from the other experiments. </p>
+
+
+        <p>Click "Next" to proceed to the following instructions.</p>
+    </div>
+
+    <div>
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </div>
+
+{% endblock %}
+
