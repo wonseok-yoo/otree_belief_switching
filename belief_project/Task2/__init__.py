@@ -72,8 +72,7 @@ class Introduction(Page):
     def is_displayed(player):
         return player.round_number == 1
     def before_next_page(player, timeout_happened):
-        if player.round_number ==1:
-            player.treatment_group = random.choice(['Low_Cost', 'High_Cost'])
+        player.treatment_group = random.choice(['Low_Cost', 'High_Cost'])
 
 class Instructions(Page):
     
