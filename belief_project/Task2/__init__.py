@@ -81,9 +81,9 @@ class Instructions(Page):
     def vars_for_template(player):
         player.update_probabilities(player.round_number)
         prob = player.prob_box1
-        if player.in_round(1).treatment_group = 'High_Cost':
+        if player.in_round(1).treatment_group == 'High_Cost':
             cost = 1
-        elif player.in_round(1).treatment_group = 'Low_Cost':
+        elif player.in_round(1).treatment_group == 'Low_Cost':
             cost = 0.5
         return {'prob': int(prob*100), 'prob_inverse': int(100-prob*100), 'cost':cost}
     
