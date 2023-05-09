@@ -68,17 +68,13 @@ class Player(BasePlayer):
     cost = models.FloatField()
     treatment_group = models.StringField(label = 'Low_Cost or High_Cost')
 
-class Introduction(Page):
-    def is_displayed(player):
-        return player.round_number == 1
-    def before_next_page(player, timeout_happened):
-        player.treatment_group = random.choice(['Low_Cost', 'High_Cost'])
-
+        
 class Instructions(Page):
     
     def is_displayed(player):
         return player.round_number == 1
     def vars_for_template(player):
+        player.treatment_group = random.choice(['Low_Cost', 'High_Cost'])
         player.update_probabilities(player.round_number)
         prob = player.prob_box1
         if player.in_round(1).treatment_group == 'High_Cost':
