@@ -71,11 +71,12 @@ class Player(BasePlayer):
 class Introduction(Page):
     def is_displayed(player):
         return player.round_number == 1
-
-class Instructions(Page):
     def before_next_page(player, timeout_happened):
         if player.round_number ==1:
             player.treatment_group = random.choice(['Low_Cost', 'High_Cost'])
+
+class Instructions(Page):
+    
     def is_displayed(player):
         return player.round_number == 1
     def vars_for_template(player):
