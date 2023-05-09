@@ -31,7 +31,6 @@ ROOMS = [
     dict(
         name='Belief_Switching_Cost',
         display_name='Belief_Switching',
-        participant_label_file='_rooms/econ101.txt',
     ),
     dict(name='live_demo', display_name='Room for live demo (no participant labels)'),
 ]
