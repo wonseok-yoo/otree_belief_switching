@@ -81,8 +81,13 @@ class Instructions(Page):
     def vars_for_template(player):
         player.update_probabilities(player.round_number)
         prob = player.prob_box1
-        return {'prob': int(prob*100), 'prob_inverse': int(100-prob*100)}
-
+        if player.in_round(1).treatment_group = 'High_Cost':
+            cost = 1
+        elif player.in_round(1).treatment_group = 'Low_Cost':
+            cost = 0.5
+        return {'prob': int(prob*100), 'prob_inverse': int(100-prob*100), 'cost':cost}
+    
+    
 class BoxEndowment(Page):
 
     def before_next_page(player, timeout_happened):
@@ -139,9 +144,9 @@ class Decision(Page):
     form_fields = ['decision']
     def vars_for_template(player):
         if player.in_round(1).treatment_group == 'High_Cost':
-            cost = 0.8
+            cost = 1
         elif player.in_round(1).treatment_group == 'Low_Cost':
-            cost = 0.4
+            cost = 1
         guess = player.belief
         return {'cost': cost, 'guess': guess}
 
@@ -170,9 +175,9 @@ class Payoff(Page):
         Box = player.in_round(5 * r + 1).box_initial
         decision = player.in_round(5* r +5).decision
         if player.in_round(1).treatment_group == 'High_Cost':
-            cost = 0.8
+            cost = 1
         elif player.in_round(1).treatment_group == 'Low_Cost':
-            cost = 0.4
+            cost = 0.5
         if k == 6:
             report = player.in_round(5 * r + 1).belief_in
             if Box == 'Green Box':
