@@ -49,8 +49,6 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    belief_dummy_1 = models.FloatField()
-    belief_dummy_2 = models.FloatField()
     prob_box1 = models.FloatField()
     prob_box2 = models.FloatField()
     ecu = models.FloatField(label = 'Belief Updating Reward', initial = 0)
@@ -82,7 +80,7 @@ class Introduction_2(Page):
         return player.round_number == 1
     
 
-        
+       
 
 class Instructions_0(Page):
     def is_displayed(player):
