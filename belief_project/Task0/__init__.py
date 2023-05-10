@@ -39,6 +39,8 @@ class Subsession(BaseSubsession):
             p.box_endowment = {'Green Box': [Constants.green_balls_box1, Constants.red_balls_box1], 'Red Box': [Constants.green_balls_box2, Constants.red_balls_box2]}[p.box]
             p.ball_colors = []
             p.beliefs = []
+            p.belief_dummay_1 = []
+            p.belief_dummy_2 = []
             p.participant.vars['total_payoff'] = 0
 
 
