@@ -90,7 +90,7 @@ class Practice_2(Page):
     form_fields = ['belief_dummy_2']
     def vars_for_template(player):
         previous = player.belief_dummy_1
-        return {'previous' : previous}    
+        return {'pre_belief' : previous}    
     def is_displayed(player):
         player.round_number == 1
         
