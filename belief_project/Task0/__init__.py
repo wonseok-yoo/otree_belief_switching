@@ -81,20 +81,7 @@ class Introduction_2(Page):
     def is_displayed(player):
         return player.round_number == 1
     
-class Practice(Page):    
-    form_model = 'player'
-    form_fields = ['belief_dummy_1']
-    def is_displayed(player):
-        player.round_number == 1
 
-class Practice_2(Page): 
-    form_model = 'player'
-    form_fields = ['belief_dummy_2']
-    def vars_for_template(player):
-        previous = player.belief_dummy_1
-        return {'pre_belief' : previous}    
-    def is_displayed(player):
-        player.round_number == 1
         
 
 class Instructions_0(Page):
@@ -214,8 +201,6 @@ class Payoff(Page):
 
 page_sequence = [
     Introduction,
-    Practice,
-    Practice_2,
     Instructions_0,
     Instructions,
     BoxEndowment,
