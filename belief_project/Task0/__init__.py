@@ -215,9 +215,9 @@ class Payoff(Page):
 page_sequence = [
     Introduction,
     Instructions_0,
+    Instructions,
     Practice,
     Practice_2,
-    Instructions,
     BoxEndowment,
     InitialReportingBeliefs,
     BallDrawing,
