@@ -190,6 +190,10 @@ class Payoff(Page):
         return {'payoff': player.payoff}
     def is_displayed(player):
         return player.round_number == Constants.num_rounds
+class Wait(WaitPage):
+    wait_for_all_groups = True
+    def is_displayed(player):
+        return player.round_number == Constants.num_rounds
 
 
 page_sequence = [
@@ -201,4 +205,5 @@ page_sequence = [
     Decision,
     NextTask,
     Payoff,
+    Wait,
 ]
