@@ -178,7 +178,7 @@ class ReportingBeliefs(Page):
         return {'round': round, 'pre_belief': player.in_round(player.round_number - 1).belief if round > 1 else player.in_round(player.round_number).belief_in, 'ball_color': player.ball_color}
 class NextTask(Page):
     def is_displayed(player):
-        return player.round_number % 5 == 0
+        return player.round_number == 5 or player.round_number == 10
 
 class Decision(Page):
     form_model = 'player'
