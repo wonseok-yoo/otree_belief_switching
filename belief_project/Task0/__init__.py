@@ -115,6 +115,10 @@ class Practice_3(Page):
         previous = player.belief
         return {'pre_belief': previous}
     
+class Start(Page):
+    def is_displayed(player):
+        return player.round_number == 1
+    
 class Instructions(Page):
     def is_displayed(player):
         return player.round_number == 1
@@ -234,6 +238,7 @@ page_sequence = [
     Practice,
     Practice_2,
     Practice_3,
+    Start,
     BoxEndowment,
     InitialReportingBeliefs,
     BallDrawing,
