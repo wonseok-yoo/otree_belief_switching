@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    Please Wait For the Instructions
+{% endblock %}
+
+
+
+{% block extra_css %}
+    <style>
+        .inline-images {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .inline-images img {
+            margin: 0 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <div>
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+    </div>
+
+{% endblock %}
