@@ -81,7 +81,7 @@ class Instructions(Page):
             cost = 1
         elif player.in_round(1).treatment_group == 'Low_Cost':
             cost = 0.5
-        return {'prob': int(prob*100), 'prob_inverse': int(100-prob*100), 'cost':cost}
+        return {'prob': int(prob*100), 'prob_inverse': int(100-prob*100), 'cost':int(cost*100)}
     
     
 class BoxEndowment(Page):
@@ -144,7 +144,7 @@ class Decision(Page):
         elif player.in_round(1).treatment_group == 'Low_Cost':
             cost = 1
         guess = player.belief
-        return {'cost': cost, 'guess': guess}
+        return {'cost': int(cost*100), 'guess': guess}
 
     def before_next_page(player, timeout_happened):
         round = player.round_number
