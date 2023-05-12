@@ -229,6 +229,10 @@ class Payoff(Page):
     def before_next_page(player, timeout_happened):
         player.participant.payoff = 0
         player.participant.payoff = player.payoff
+class Wait(WaitPage):
+    wait_for_all_groups = True
+    def is_displayed(player):
+        return player.round_number == Constants.num_rounds
 
 page_sequence = [
     Introduction_2,
@@ -246,4 +250,5 @@ page_sequence = [
     ReportingBeliefs,
     NextTask,
     Payoff,
+    Wait,
 ]
