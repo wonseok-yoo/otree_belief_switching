@@ -22,7 +22,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect,
     )
     
-    instruction = models.StringField(
+    gender = models.StringField(
         choices=[['Yes', 'Yes'], ['No', 'No']],
         label='Was the instruction clear?',
         widget=widgets.RadioSelect,
