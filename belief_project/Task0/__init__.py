@@ -84,6 +84,12 @@ class Instructions_0(Page):
     def is_displayed(player):
         return player.round_number == 1
 
+
+class Practice_0(Page):
+    def is_displayed(player):
+        return player.round_number == 1
+    
+    
 class Practice(Page):
     form_model = 'player'
     form_fields = ['belief_in']
