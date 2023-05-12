@@ -142,7 +142,7 @@ class Decision(Page):
         if player.in_round(1).treatment_group == 'High_Cost':
             cost = 1
         elif player.in_round(1).treatment_group == 'Low_Cost':
-            cost = 1
+            cost = 0.5
         guess = player.belief
         return {'cost': int(cost*100), 'guess': guess}
 
