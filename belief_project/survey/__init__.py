@@ -47,7 +47,7 @@ class Player(BasePlayer):
 # PAGES
 class Demographics(Page):
     form_model = 'player'
-    form_fields = ['age', 'gender','participate']
+    form_fields = ['gender','participate']
 
 
 class CognitiveReflectionTest(Page):
