@@ -230,6 +230,7 @@ page_sequence = [
     Introduction,
     Instructions_0,
     Instructions,
+    Practice_0,
     Practice,
     Practice_2,
     Practice_3,
