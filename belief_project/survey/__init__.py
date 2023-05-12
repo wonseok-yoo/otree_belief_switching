@@ -16,20 +16,21 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    age = models.IntegerField(label='What is your age?', min=13, max=125)
-    gender = models.StringField(
-        choices=[['Male', 'Male'], ['Female', 'Female']],
-        label='What is your gender?',
-        widget=widgets.RadioSelect,
-    )
     participate = models.StringField(
         choices=[['Yes', 'Yes'], ['No', 'No']],
         label='Have you participated in a similar economic experiment?',
         widget=widgets.RadioSelect,
     )
+    
+    instruction = models.StringField(
+        choices=[['Yes', 'Yes'], ['No', 'No']],
+        label='Was the instruction clear?',
+        widget=widgets.RadioSelect,
+    )
+    
     crt_bat = models.LongStringField(
         label='''
-        In scenario 0, you did not have any box. In scenario 3, you had the box, but could not make any decision to swap or to keep. Do you think there is any difference in between the two? If so, what is it?'''
+        In scenario 0, you did not have any box. In scenario 3, you had the box, but could not make any decision to swap or to keep. Do you think there is any difference between the two? If so, what did you think it was?'''
     )
     crt_widget = models.LongStringField(
         label='''
