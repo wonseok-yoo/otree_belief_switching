@@ -2,10 +2,12 @@
 {% load otree static %}
 
 {% block content %}
-    <h1>Payoff</h1>
-    <p>Your payoff for this experiment is: {{player.payoff}}, {{player.participant.payoff}}<strong>
+    {% block content %}
+    <h1>Scenario - 1 recorded succesfully </h1>
 
-    </strong></p>
+<p> Thank you for completing Scenario 1. 
+    When all subjects are done with the Scenario 1, we will go through the explanation of Scenario 2. 
+<p> Wait for the experimenter's instructions </p>
 
     <form method="post">
         <button type="submit" class="btn btn-primary">Continue</button>
