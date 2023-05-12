@@ -100,6 +100,14 @@ class Practice_2(Page):
         previous = player.belief_in
         return {'pre_belief': previous}
 
+class Practice_3(Page):
+    form_model = 'player'
+    form_fields = ['belief_in']
+    def is_displayed(player):
+        return player.round_number == 1
+    def vars_for_template(player):
+        previous = player.belief
+        return {'pre_belief': previous}
     
 class Instructions(Page):
     def is_displayed(player):
@@ -218,6 +226,7 @@ page_sequence = [
     Instructions,
     Practice,
     Practice_2,
+    Practice_3,
     BoxEndowment,
     InitialReportingBeliefs,
     BallDrawing,
