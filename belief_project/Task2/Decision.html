@@ -5,15 +5,15 @@
     <h1>Decision</h1>
     <p> After the 5th round, your guess was {{guess}}%</p>
     <p> You have two options. You can either <strong> swap </strong> or <strong> keep </strong> your box. </p>
-    <p> If you swap, you have to pay ${{ cost }} </p>
+    <p> If you swap, you have to pay {{ cost }}ECU </p>
 
     <p> If you swap the box, and end up owning
-    <p> - the Green Box, you will get $3 but pay ${{ cost }} </p>
-    <p> - the Red Box, you will get $1 but pay ${{ cost }} </p>
+    <p> - the Green Box, you will get 300 ECU but pay {{ cost }}ECU </p>
+    <p> - the Red Box, you will get 100 ECU but pay ${{ cost }}ECU </p>
 
     <p> If you keep the box, and end up owning
-    <p> - the Green Box, you will get $3 </p>
-    <p> - the Red Box, you will get $1 </p>
+    <p> - the Green Box, you will get 300 ECU </p>
+    <p> - the Red Box, you will get 100 ECU </p>
 
 <form method="post">
 
