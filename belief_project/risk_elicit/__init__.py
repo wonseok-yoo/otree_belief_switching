@@ -10,17 +10,17 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 1
     MPL = [
-        (1,  "100% chance of $2", "0% of $4, and 100% chance of $0"),
-        (2,  "100% chance of $2", "10% of $4, and 90% chance of $0"),
-        (3,  "100% chance of $2", "20% of $4, and 80% chance of $0"),
-        (4,  "100% chance of $2", "30% of $4, and 70% chance of $0"),
-        (5,  "100% chance of $2", "40% of $4, and 60% chance of $0"),
-        (6,  "100% chance of $2", "50% of $4, and 50% chance of $0"),
-        (7,  "100% chance of $2", "60% of $4, and 40% chance of $0"),
-        (8,  "100% chance of $2", "70% of $4, and 30% chance of $0"),
-        (9,  "100% chance of $2", "80% of $4, and 20% chance of $0"),
-        (10, "100% chance of $2", "90% of $4, and 10% chance of $0"),
-        (11, "100% chance of $2", "100% of $4, and 0% chance of $0"),
+        (1,  "100% chance of 200 ECU", "0% of 400 ECU, and 100% chance of 0 ECU"),
+        (2,  "100% chance of 200 ECU", "10% of 400 ECU, and 90% chance of 0 ECU"),
+        (3,  "100% chance of 200 ECU", "20% of 400 ECU, and 80% chance of 0 ECU"),
+        (4,  "100% chance of 200 ECU", "30% of 400 ECU, and 70% chance of 0 ECU"),
+        (5,  "100% chance of 200 ECU", "40% of 400 ECU, and 60% chance of 0 ECU"),
+        (6,  "100% chance of 200 ECU", "50% of 400 ECU, and 50% chance of 0 ECU"),
+        (7,  "100% chance of 200 ECU", "60% of 400 ECU, and 40% chance of 0 ECU"),
+        (8,  "100% chance of 200 ECU", "70% of 400 ECU, and 30% chance of 0 ECU"),
+        (9,  "100% chance of 200 ECU", "80% of 400 ECU, and 20% chance of 0 ECU"),
+        (10, "100% chance of 200 ECU", "90% of 400 ECU, and 10% chance of 0 ECU"),
+        (11, "100% chance of 200 ECU", "100% of 400 ECU, and 0% chance of 0 ECU"),
     ]
 
 class Subsession(BaseSubsession):
