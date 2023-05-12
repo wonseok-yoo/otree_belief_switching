@@ -231,6 +231,7 @@ class Payoff(Page):
         player.participant.payoff = player.payoff
 
 page_sequence = [
+    Introduction_2,
     Introduction,
     Instructions_0,
     Instructions,
