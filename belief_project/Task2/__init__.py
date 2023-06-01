@@ -74,7 +74,7 @@ class Instructions(Page):
     def is_displayed(player):
         return player.round_number == 1
     def vars_for_template(player):
-        player.treatment_group = random.choice(['Low_Cost', 'High_Cost'], p=[1, 0])
+        player.treatment_group = 'Low_Cost'
         player.update_probabilities(player.round_number)
         prob = player.prob_box1
         if player.in_round(1).treatment_group == 'High_Cost':
