@@ -17,10 +17,10 @@ class Constants(BaseConstants):
     name_in_url = 'Task3'
     players_per_group = None
     num_rounds = 15
-    red_balls_box1 = 4
-    green_balls_box1 = 5
-    red_balls_box2 = 5
-    green_balls_box2 = 4
+    red_balls_box1 = 3
+    green_balls_box1 = 6
+    red_balls_box2 = 6
+    green_balls_box2 = 3
 
 
 class Subsession(BaseSubsession):
@@ -113,9 +113,9 @@ class BallDrawing(Page):
     def vars_for_template(player):
         box_initial = player.in_round(1).box_initial
         if box_initial == 'Green Box':
-            player.ball_color = random.choices(['Green', 'Red'], weights=(5, 4))[0]
+            player.ball_color = random.choices(['Green', 'Red'], weights=(6, 3))[0]
         else:
-            player.ball_color = random.choices(['Green', 'Red'], weights=(4, 5))[0]
+            player.ball_color = random.choices(['Green', 'Red'], weights=(3, 6))[0]
         round = player.round_number%5
         if round ==0 :
             round = 5
