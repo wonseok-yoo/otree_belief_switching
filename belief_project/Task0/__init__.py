@@ -84,7 +84,11 @@ class Instructions_0(Page):
     def is_displayed(player):
         return player.round_number == 1
 
-
+class Waitt(WaitPage):
+    wait_for_all_groups = True
+    def is_displayed(player):
+        return player.round_number == 1
+    
 class Practice_0(Page):
     def is_displayed(player):
         return player.round_number == 1
@@ -241,8 +245,11 @@ page_sequence = [
     Instructions,
     Practice_0,
     Practice,
+    Waitt,
+    Waitt,
     Practice_2,
     Practice_3,
+    Waitt,
     Start,
     BoxEndowment,
     InitialReportingBeliefs,
