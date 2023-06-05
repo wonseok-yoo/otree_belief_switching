@@ -186,10 +186,10 @@ class Payoff(Page):
                 score = 3
                 if decision == 'swap':
                     score = 3-cost
-            if Box == 'Red Box':
-                score = 0.5
+            elif Box == 'Red Box':
+                score = 1
                 if decision == 'swap':
-                    score = 0.5-cost
+                    score = 1-cost
         else:
             report = player.in_round(5 * r + k).belief
             if Box == 'Green Box':
