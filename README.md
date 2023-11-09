@@ -2,7 +2,7 @@
 
 This is a full code for my job market paper on "Belief Updating Under Cognitive Dissonance: An Experimental Study"
 
-- Abstract -
+- Abstract 
   
 Cognitive dissonance refers to the psychological tension that arises when individuals hold two conflicting beliefs, views, or actions simultaneously, and within a financial decision-making context, this tension may arise when a subject’s beliefs and asset choices conflict. We investigate the dynamics of belief updating in a setting where cognitive dissonance could play a significant role, by designing an experiment with four treatments. The first treatment simply elicits beliefs. In the subsequent three treatments, subjects are endowed with one of two potential assets at random. Following this, they are asked to report their beliefs regarding their assigned asset after each signal. Subjects have the option to either “switch” or “keep” their initial asset, with associated costs that vary across the three latter treatments (zero, finite, or infinite). By manipulating switching costs, we effectively intensify subjective ownership towards the asset, fostering cognitive dissonance. Our findings indicate that subjects frequently make sub-optimal asset choice decisions when confronted with a finite transaction cost. Furthermore, they tend to distort their beliefs about their endowed asset, aligning their beliefs with their sub-optimal actions to mitigate cognitive dissonance.
 
@@ -22,7 +22,7 @@ The chosen ball is returned to the box and another ball will be drawn from the s
 
 This information provision process is repeated for 5 rounds. 
 
-- Task 0 -
+- Task 0 
 
 In Task 0, the value of the chosen asset is not relevant to the subjects because subjects payments do not depend on the value of the assets. 
 
@@ -32,7 +32,7 @@ After the task is over, one of the rounds will be randomly selected and subjects
 
 We use Binarized Scoring Rule as in Hossain et al (2013). 
 
-- Task 1 and Task 2 -
+- Task 1 and Task 2 
 
 In Task 1, and 2, in addition to 5 rounds of information provision and belief elicitaiton in Task 0, subjects are allowed to choose to "swap" or "keep" their chosen asset. 
 
@@ -48,7 +48,7 @@ We find that subjects indeed hesitate to switch, and moreover, they cater their 
 
 In particular, subjects who were supposed to switch when they were Bayesian, inflated their subjective beliefs so that their beliefs are aligned with their sub-optimal action ("Keep")
 
-- Taks 3 -
+- Taks 3 
 
 In Task 3, subjects payments may depend on the value of the assets, but they are not allowed to switch. In this sense, subjects have the highest degree of subjective ownership. 
 
